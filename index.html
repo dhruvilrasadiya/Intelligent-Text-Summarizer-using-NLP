@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+body {
+      font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
+      background-color: #282c34;
+      background-image: url("D:\USCI\Project\templates\Untitled design.jpg");
+      background-repeat: repeat; /* Repeat the texture image */
+    }
+    
+    header {
+      background-image: linear-gradient(to right, #5cf0c3, #ffffff);
+      padding: 2px;
+      color: #000000;
+      border-radius: 20px; /* Rounded edges */
+      left: 115px; /* Center align text */
+    }
+    
+    button {
+      display: block;
+      margin-bottom: 10px;
+      padding: 10px 20px;
+      background-image: linear-gradient(to right, #5cf0c3, #5cf0c3);
+      color: #000000;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px; /* Rounded edges */
+      position: absolute;
+      font-weight: bold; /* Set font weight to bold */
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    
+    button:hover {
+      background-color: #5cf0c3;
+      color: #b9a118;
+    }
+    
+    button:active {
+      transform: scale(0.95);
+    }
+    
+    .upload-file {
+      left: 115px;
+      top: 288px;
+      font-size: 18px; /* Increase font size */
+    }
+
+    .Summarize {
+      left: 888px;
+      top: 585px;
+      font-size: 18px; /* Increase font size */
+    }
+      /* Click Animation */
+    .clicked {
+      animation: clickAnimation 0.3s;
+    }
+
+    @keyframes clickAnimation {
+      0% { transform: scale(1); }
+      50% { transform: scale(0.95); }
+      100% { transform: scale(1); }
+    }
+        .text {
+      width: 720px; /* Adjusted width */
+      height: 500px; /* Adjusted height */
+      padding: 10px;
+      border: 3px solid #5cf0c3; /* 2px border */
+      border-radius: 10px; /* Rounded edges */
+      font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      position: absolute;
+      left: 110px;
+      top: 332px;
+      margin-bottom: 10px;
+      resize: none; /* Disable textarea resizing */
+      transition: border-color 0.3s ease; /* Transition effect */
+    }
+    .text:focus {
+      border-color: #fd0303; /* Darker shade of the border color */
+    }
+    .text2 {
+      width: 720px; /* Adjusted width */
+      height: 500px; /* Adjusted height */
+      padding: 10px;
+      border: 3px solid #5cf0c3; /* 2px border */
+      border-radius: 10px; /* Rounded edges */
+      font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      position: absolute;
+      left: 1050px; /* Adjusted position */
+      top: 332px; /* Adjusted position */
+      margin-bottom: 10px;
+      resize: none; /* Disable textarea resizing */
+      transition: border-color 0.3s ease; /* Transition effect */
+    }
+    .text2:focus {
+      border-color: #fd0303; /* Darker shade of the border color */
+    }
+
+    button.Summarize {
+      left: 888px;
+      top: 585px;
+      font-size: 18px; /* Increase font size */
+    }
+
+      button {
+        display: block;
+        margin-bottom: 10px;
+        padding: 10px 20px;
+        background-image: linear-gradient(to right, #5cf0c3, #5cf0c3);
+        color: #000000;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px; /* Rounded edges */
+        position: absolute;
+        font-weight: bold; /* Set font weight to bold */
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+
+    .radio-group {
+    position: absolute;
+    top: 288px;
+    left: 1230px;
+    display: flex;
+    font-size: 14px;
+    gap: 0px;
+    color: #fff;
+  }
+
+  input[type="radio"] {
+    margin-right: 0px;
+    opacity: 0; /* Hide the default radio button */
+  }
+
+  .radio-group label {
+    display: inline-block;
+    padding: 7px 10px;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    border-radius: 100px;
+    border: 1px solid #000000;
+    transition: background-color 0.3s ease;
+  }
+
+  .radio-group input[type="radio"]:checked + label {
+    background-color: #5cf0c3;
+    color: #000000;
+    animation: clickAnimation 0.3s;
+  }
+  .counting1 {
+      font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      position: absolute;
+      background-image: linear-gradient(to right, #ffffff, #ffffff);
+      padding: 15px; 
+      left: 125px;
+      bottom: 80px;
+      position: absolute;
+      color: #000000;
+    }
+    .counting2 {
+      font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      position: relative;
+      background-image: linear-gradient(to right, #ffffff, #ffffff);
+      padding: 15px; 
+      right: 760px;
+      bottom: 80px;
+      position: absolute;
+      color: #000000;
+    }
+    .summarypercentage{
+    position: absolute;
+    top: 298px;
+    left: 1080px;
+    display: flex;
+    font-size: 24px;
+    color: #fff;
+
+    }
+    .summarizer {
+      position: absolute;
+      left: 730px;
+      top: 110px;
+      font-size: 30px;
+      color: #ffffff;
+      font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
+    }
+    .paragraph {
+      position: absolute;
+      left: 720px;
+      top: 173px;
+      font-size: 18px;
+      color: #ffffff;
+      font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
+    }
+    .delete {
+      position: absolute; 
+      right: 132px;
+      bottom: 80px;
+      font-size: 10px; 
+      color: #000000;
+    }
+
+    .copy {
+      position: absolute;
+      right: 210px;
+      bottom: 80px;
+      font-size: 10px;
+      color: #000000;
+    }
+
+    .delete-1 {
+      position: absolute;
+      left: 778px;
+      bottom: 80px;
+      font-size: 10px;
+      color: #000000;
+    }
+    .clicked {
+      animation: clickAnimation 0.3s;
+    }
+
+    @keyframes clickAnimation {
+      0% { transform: scale(1); }
+      50% { transform: scale(0.95); }
+      100% { transform: scale(1); }
+    }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1 style="text-align: center;">Summarizer</h1>
+  </header>
+
+    <div class="summarypercentage">
+      <label for="percentage" style="font-size: 16px;">Summary percentage:</label>
+    </div>
+    <element class="summarizer"> 
+      <h1 style="margin: 20px;">SUMMARIZER</h1>
+    </element>
+    <element class="paragraph">
+      <p>SUMMARIZE YOUR ANY DOCUMENT WITH ONE CLICK</p>
+    </element>
+
+  <form id="summarizeForm" action="{{ url_for('index') }}" method="POST">
+
+    <label for="text"></label>
+    <textarea class="text" id="text" name="text" rows="4" oninput="limitWords(event)" placeholder="Paste or Enter Your Text....">{{ text }}</textarea>
+    <button class="delete-1" id="delete-btn-1" onclick="deleteText(event)">Delete</button>
+    <label for="text2"></label>
+    <textarea class="text2" id="text2" name="text2">{{ cleaned_text }}</textarea>
+    <button class="delete" id="delete-btn-2" onclick="deleteText(event)">Delete</button>
+  <button class="copy" id="copy-btn" onclick="copyText(event)">Copy</button>
+
+    <div class="radio-group">
+      <input type="radio" name="percentage" id="percentage-25" value="25"{{ percentage_25_selected }}>
+      <label for="percentage-25">25%</label>
+      <input type="radio" name="percentage" id="percentage-50" value="50"{{ percentage_50_selected }}>
+      <label for="percentage-50">50%</label>
+    </div>
+
+    <span class="counting1" id="word-count">{{ num_of_words_in_original_text }} words</span>
+    <span class="counting2" id="word-count">{{ num_of_words_in_summarized_text }} words</span>
+
+    <button class="upload-file" onclick="browseFile(event)">Upload File</button>
+
+    <button class="Summarize" type="submit" id="summarizeButton">Summarize</button>
+</form>
+<script 
+src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.8.335/pdf.min.js"></script>
+
+<script>
+ function browseFile(event) {
+  event.preventDefault();
+  var input = document.createElement('input');
+  input.type = 'file';
+  input.accept = '.txt, .doc, .docx, .pdf';
+  input.onchange = function () {
+    var file = input.files[0];
+    if (file.type === 'application/pdf') {
+      var reader = new FileReader();
+      reader.onload = function () {
+        var arrayBuffer = reader.result;
+        var pdfData = new Uint8Array(arrayBuffer);
+        var loadingTask = pdfjsLib.getDocument({ data: pdfData });
+        loadingTask.promise.then(function (pdf) {
+          var numPages = pdf.numPages;
+          var text = '';
+          var loadPage = function (pageNum) {
+            pdf.getPage(pageNum).then(function (page) {
+              page.getTextContent().then(function (textContent) {
+                var pageText = '';
+                textContent.items.forEach(function (item) {
+                  pageText += item.str + ' ';
+                });
+                text += pageText;
+                if (pageNum < numPages) {
+                  loadPage(pageNum + 1);
+                } else {
+                  populateInput(text);
+                }
+              });
+            });
+          };
+          loadPage(1);
+        });
+      };
+      reader.readAsArrayBuffer(file);
+    } else {
+      populateInputFromFile(file);
+    }
+  };
+  input.click();
+}
+
+function populateInput(text) {
+  document.getElementById('text').value = text;
+  limitWords();
+}
+
+function populateInputFromFile(file) {
+  var reader = new FileReader();
+  reader.onload = function () {
+    var text = reader.result;
+    if (text.trim().split(/\s+/).length > 10000) {
+      alert('The selected file contains more than 10,000 words. Please choose a file with fewer words.');
+      return;
+    }
+    populateInput(text);
+  };
+  reader.readAsText(file);
+}
+function populateInputFromFile(file) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      if (file.type === 'application/msword') {
+        // Upload the file to the server for text extraction
+        uploadFileToServer(file);
+      } else {
+        populateInput(reader.result);
+      }
+    };
+    reader.readAsText(file);
+  }
+
+  function uploadFileToServer(file) {
+    var formData = new FormData();
+    formData.append('file', file);
+    
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/extract-text', true);
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        var extractedText = xhr.responseText;
+        populateInput(extractedText);
+      } else {
+        alert('Failed to extract text from the DOC file.');
+      }
+    };
+    xhr.send(formData);
+  }
+  function deleteText(event) {
+        event.preventDefault();
+        var textarea = event.target.previousElementSibling;
+        textarea.value = '';
+      }
+
+      function copyText(event) {
+        event.preventDefault();
+        var textarea = event.target.previousElementSibling.previousElementSibling;
+        textarea.select();
+        document.execCommand("copy");
+      }
+
+</script>
+    
+</body>
+</html>
